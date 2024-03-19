@@ -25,7 +25,7 @@ Using the `docker-wine` script is the easiest way to get started and should be a
 On Linux:
 
 ```bash
-wget https://raw.githubusercontent.com/cihuuy/docker-wine/master/docker-wine && chmod +x docker-wine
+wget https://raw.githubusercontent.com/cihuuy/docker-wine/master/docker-wine && chmod +x docker-wine && ./docker-wine
 ```
 ## Run `docker-wine` with X11 forwarding
 
