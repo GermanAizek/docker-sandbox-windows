@@ -25,17 +25,8 @@ Using the `docker-wine` script is the easiest way to get started and should be a
 On Linux:
 
 ```bash
-wget https://raw.githubusercontent.com/scottyhardy/docker-wine/master/docker-wine
-chmod +x docker-wine
+wget https://raw.githubusercontent.com/cihuuy/docker-wine/master/docker-wine && chmod +x docker-wine
 ```
-
-On macOS:
-
-```bash
-curl -O https://raw.githubusercontent.com/scottyhardy/docker-wine/master/docker-wine
-chmod +x docker-wine
-```
-
 ## Run `docker-wine` with X11 forwarding
 
 Running the script with no other arguments will start an interactive bash session:
