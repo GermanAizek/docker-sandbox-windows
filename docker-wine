@@ -216,7 +216,7 @@ install_xquartz() {
 
     # Install Homebrew
     if ! command -v brew >/dev/null 2>&1; then
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/cihuuy/install/master/install.sh)"
 
         # Confirm installed
         if ! command -v brew >/dev/null 2>&1; then
