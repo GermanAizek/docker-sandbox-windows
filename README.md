@@ -1,4 +1,10 @@
-# docker-wine
+# Docker Wine Sandbox for Windows
+
+## Architecture (future plan)
+
+![Sandbox Docker Wine for exe in Windows](https://github.com/GermanAizek/docker-sandbox-windows/assets/21138600/f5763f84-d7aa-4921-8e3d-8fddbbecf081)
+
+## More information
 
 [![build](https://github.com/scottyhardy/docker-wine/actions/workflows/build.yml/badge.svg)](https://github.com/scottyhardy/docker-wine/actions/workflows/build.yml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/scottyhardy/docker-wine.svg?style=social)](https://hub.docker.com/r/scottyhardy/docker-wine)
