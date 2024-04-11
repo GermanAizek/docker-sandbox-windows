@@ -24,9 +24,31 @@ Using docker-wine with an RDP server allows the container to be run on a headles
 
 ## Getting Started
 
-Using the `docker-wine` script is the easiest way to get started and should be all you need for Linux and macOS.
+Using the `docker-wine` script is the easiest way to get started and should be all you need for Linux, macOS and Windows (WSL2 - sounds is broken).
 
 ### Download the `docker-wine` script
+
+On WSL2:
+
+```bash
+apt update && apt install docker xauth pulseaudio
+```
+
+When Docker Desktop starts, go to `Settings > Resources > WSL Integration`.
+
+The Docker-WSL integration is enabled on the default WSL distribution, which is Ubuntu
+
+To change your default WSL distro, run:
+
+```bash
+wsl --set-default <distro name>
+```
+
+Installing `docker-wine` and run rdp access
+
+```bash
+wget https://raw.githubusercontent.com/cihuuy/docker-wine/master/docker-wine && chmod +x docker-wine && ./docker-wine --rdp
+```
 
 On Linux:
 
