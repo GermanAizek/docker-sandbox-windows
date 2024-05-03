@@ -224,49 +224,6 @@ If you don't want the volume container, you can delete it by using:
 docker volume rm winehome
 ```
 
-## Use docker-wine image in a Dockerfile
-
-If you plan to use `scottyhardy/docker-wine` as a base for another Docker image, you should set up the same `ENTRYPOINT` to enable X11 forwarding and RDP server modes to continue operating:
-
-```dockerfile
-FROM scottyhardy/docker-wine:latest
-... <your code here>
-ENTRYPOINT ["/usr/bin/entrypoint"]
-```
-
-## Manually running with `docker run` commands
-
-There's a number of prerequisites to getting pulseaudio redirection working on Linux and for X11 redirection to work on macOS.  I plan to document these in a wiki in the near future but this should be enough to get you started.
-
-First, pull the latest image from DockerHub:
-
-```bash
-docker pull scottyhardy/docker-wine
-```
-
-Here is a basic `docker run` command for X11 redirection on Linux that will start an interactive bash session:
-
-```bash
-docker run -it \
-  --rm \
-  --hostname="$(hostname)" \
-  --env="DISPLAY" \
-  --volume="${XAUTHORITY:-${HOME}/.Xauthority}:/root/.Xauthority:ro" \
-  --volume="/tmp/.X11-unix:/tmp/.X11-unix:ro" \
-  scottyhardy/docker-wine /bin/bash
-```
-
-Here is a basic `docker run` command for starting the RDP server on both macOS and Linux with an interactive bash session:
-
-```bash
-docker run -it \
-  --rm \
-  --hostname="$(hostname)" \
-  --env="RDP_SERVER=yes" \
-  --publish="3389:3389/tcp" \
-  scottyhardy/docker-wine /bin/bash
-```
-
 ## Troubleshooting
 
 To test video, try opening Notepad:
