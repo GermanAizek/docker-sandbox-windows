@@ -280,3 +280,10 @@ To test sound, try using `pacat`:
 ```bash
 ./docker-wine pacat -vv /dev/urandom
 ```
+## Uninstalling
+
+It simple, just execute for removing container:
+
+```
+sudo docker rmi -f docker-wine
+```
